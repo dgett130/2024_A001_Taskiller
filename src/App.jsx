@@ -1,4 +1,6 @@
 import './App.css'
+import {Tasklist} from "./tasklist/tasklist.tsx";
+
 
 function App() {
 
@@ -8,7 +10,7 @@ function App() {
           <div className="container border-red">
               <div className="content-container border-green">
                 <div className="widget-container border-yellow">
-
+                    <Tasklist/>
                 </div>
               </div>
           </div>
