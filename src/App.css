@@ -1,0 +1,43 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6fr 1fr;
+
+  height: 100dvh;
+  width: 100dvw;
+  align-items: center;
+  justify-items: center;
+
+  row-gap: ;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.tool-container {
+  height: 100%;
+  width: 100%;
+}
+
+.border-red {
+  border: 3px solid #ff0000;
+}
+.border-green {
+  border: 3px solid #00ff00;
+}
+.border-yellow {
+  border: 3px solid #ffee00;
+}
+.border-blue {
+  border: 3px solid #0000ff;
+}
