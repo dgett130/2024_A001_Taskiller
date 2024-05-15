@@ -1,32 +1,46 @@
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-}
-
 .app {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 6fr 1fr;
 
-  height: 100dvh;
+  height: 99dvh;
   width: 100dvw;
   align-items: center;
   justify-items: center;
 
-  row-gap: ;
+  gap: .3rem;
 }
 
 .container {
-  height: 100%;
-  width: 100%;
+  height: 99%;
+  width: 99%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
 .tool-container {
-  height: 100%;
-  width: 100%;
+  height: 99%;
+  width: 99%;
+}
+
+.content-container {
+    height: 100%;
+    width: 100%;
+
+  display: flex;
+  flex-direction:  row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.widget-container {
+  flex-grow: 1;
+
+  margin: 5%;
 }
 
 .border-red {
