@@ -9,17 +9,17 @@ function App() {
 
   return (
       <div className="app">
-          <div className="container border-red">
-              <div className="content-container border-green">
-                  <div className={"logo-header-container border-blue"}>
+          <div className="container">
+              <div className="content-container">
+                  <div className={"logo-header-container"}>
                       <img src={mainLogo} alt={"Logo.png"} />
                   </div>
-                <div className="widget-container border-yellow">
+                <div className="widget-container">
                     <Tasklist/>
                 </div>
               </div>
           </div>
-          <div className="tool-container border-blue">
+          <div className="tool-container">
               <Toolbar />
           </div>
       </div>

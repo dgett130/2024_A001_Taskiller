@@ -38,7 +38,7 @@ export function Tasklist() {
     return (
         <div>
             <h2>Tasklist</h2>
-            <Box sx={{p: 2, border: '1px dashed orange'}}>
+            <Box sx={{p: 2}}>
                 <Typography sx={{mt: 4, mb: 2}} variant="h6" component="div">
                     Da Fare per oggi
                 </Typography>
