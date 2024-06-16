@@ -32,15 +32,24 @@
     width: 100%;
 
   display: flex;
-  flex-direction:  row;
+  flex-direction:  column;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
 .widget-container {
   flex-grow: 1;
-
   margin: 5%;
+}
+
+.logo-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-header-container img {
+  max-width: 120px;
 }
 
 .border-red {

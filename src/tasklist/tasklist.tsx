@@ -1,97 +1,72 @@
-import Box from '@mui/joy/Box';
-import {Sheet, Table, ThemeProvider} from "@mui/joy";
-import {createTheme} from '@mui/system';
+import * as React from 'react';
+import {styled} from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import ListItemText from '@mui/material/ListItemText';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import FolderIcon from '@mui/icons-material/Folder';
+import DeleteIcon from '@mui/icons-material/Delete';
+import './tasklist.css';
+import {ListButtons} from "./listButtons";
+import LinearWithValueLabel from "../shared/progressBar";
 
-const theme = createTheme({
-    palette: {
-        sheetBackground: '#0E1215',
-    },
-});
+
+function generate(element) {
+    return [0, 1, 2].map((value) =>
+        React.cloneElement(element, {
+            key: value,
+        }),
+    );
+}
+
+const Demo = styled('div')(({theme}) => ({
+    backgroundColor: '#627C85',
+    //border: '2px solid red',
+    color: '#0e1215',
+    borderRadius: 20,
+}));
 
 
 export function Tasklist() {
+    const [dense, setDense] = React.useState(false);
+    const [secondary, setSecondary] = React.useState(false);
+
     return (
         <div>
-            <ThemeProvider theme={theme}>
-                <h1>Tasklist</h1>
-                <Box sx={{p: 2, border: '1px dashed orange'}}>
-                    <Sheet
-                        variant="solid"
-                        color="sheetBackground"
-                        invertedColors
-                        sx={{
-                            pt: 1,
-                            borderRadius: 'sm',
-                            transition: '0.3s',
-                            background: `linear-gradient(45deg, 'red', 'green')`,
-                            '& tr:last-child': {
-                                '& td:first-child': {
-                                    borderBottomLeftRadius: '8px',
-                                },
-                                '& td:last-child': {
-                                    borderBottomRightRadius: '8px',
-                                },
-                            },
-                        }}
-                    >
-                        <Table
-                            borderAxis="yBetween"
-                            size="md"
-                            stickyFooter={false}
-                            stickyHeader
-                            stripe={'odd'}
-                            hoverRow
-                        >
-                            <thead>
-                            <tr>
-                                <th style={{width: '40%'}}>Dessert (100g serving)</th>
-                                <th>Calories</th>
-                                <th>Fat&nbsp;(g)</th>
-                                <th>Carbs&nbsp;(g)</th>
-                                <th>Protein&nbsp;(g)</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Frozen yoghurt</td>
-                                <td>159</td>
-                                <td>6</td>
-                                <td>24</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>Ice cream sandwich</td>
-                                <td>237</td>
-                                <td>9</td>
-                                <td>37</td>
-                                <td>4.3</td>
-                            </tr>
-                            <tr>
-                                <td>Eclair</td>
-                                <td>262</td>
-                                <td>16</td>
-                                <td>24</td>
-                                <td>6</td>
-                            </tr>
-                            <tr>
-                                <td>Cupcake</td>
-                                <td>305</td>
-                                <td>3.7</td>
-                                <td>67</td>
-                                <td>4.3</td>
-                            </tr>
-                            <tr>
-                                <td>Gingerbread</td>
-                                <td>356</td>
-                                <td>16</td>
-                                <td>49</td>
-                                <td>3.9</td>
-                            </tr>
-                            </tbody>
-                        </Table>
-                    </Sheet>
-                </Box>
-            </ThemeProvider>
+            <h2>Tasklist</h2>
+            <Box sx={{p: 2, border: '1px dashed orange'}}>
+                <Typography sx={{mt: 4, mb: 2}} variant="h6" component="div">
+                    Da Fare per oggi
+                </Typography>
+                <Demo>
+                    <List dense={dense}>
+                        {generate(
+                            <ListItem
+                                secondaryAction={
+                                    <ListButtons />
+                                }
+                            >
+                                <ListItemAvatar>
+                                    <Avatar className={"avatarIcon"}>
+                                        <FolderIcon/>
+                                    </Avatar>
+                                </ListItemAvatar>
+                                <div className={"tasklist-inner-body"}>
+                                    <ListItemText
+                                        primary="Single line element"
+                                        secondary={secondary ? 'Secondary text' : null}
+                                    />
+                                    <LinearWithValueLabel width='50%' progress='70'/>
+                                </div>
+                            </ListItem>,
+                        )}
+                    </List>
+                </Demo>
+            </Box>
         </div>
     );
 }

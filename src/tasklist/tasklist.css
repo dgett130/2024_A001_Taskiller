@@ -1,0 +1,19 @@
+.avatarIcon {
+    color: #627C85 !important;
+}
+
+.MuiSvgIcon-root {
+    color: #0e1215 !important;
+}
+
+.deleteOnHover:hover {
+    color:  red !important;
+}
+
+.tasklist-inner-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
