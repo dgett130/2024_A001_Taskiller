@@ -19,7 +19,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #0e1215;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -43,6 +43,14 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid darkgray;  /* creates padding around scroll thumb */
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0e1215;
+  overflow: auto;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -50,14 +58,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {

@@ -1,18 +1,27 @@
 import './App.css'
+import {Tasklist} from "./tasklist/tasklist.tsx";
+import {Toolbar} from "./toolbar/toolbar.tsx";
+import mainLogo from './assets/logo_init.png';
+
 
 function App() {
 
 
   return (
       <div className="app">
-          <div className="container border-red">
+          <div className="container">
+              <div className="content-container">
+                  <div className={"logo-header-container"}>
+                      <img src={mainLogo} alt={"Logo.png"} />
+                  </div>
+                <div className="widget-container">
+                    <Tasklist/>
+                </div>
+              </div>
           </div>
-          <div className="tool-container border-blue">
+          <div className="tool-container">
+              <Toolbar />
           </div>
-          {/*<div className="container border-green">*/}
-          {/*</div>*/}
-          {/*<div className="container border-yellow">*/}
-          {/*</div>*/}
       </div>
   )
 }
