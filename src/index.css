@@ -1,4 +1,18 @@
 :root {
+
+  /* SPACING */
+  --ss4: 0.25rem;
+  --ss8: 0.50rem;
+  --ss12: 0.75rem;
+  --ss16: 1rem;
+  --ss20: 1.25rem;
+  --ss28: 1.75rem;
+  --sx40: 2.5rem;
+  --sx60: 3.75rem;
+  --sx100: 6.25rem;
+  --sx160: 10rem;
+  --sx240: 15rem;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
