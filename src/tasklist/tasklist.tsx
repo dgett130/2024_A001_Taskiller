@@ -35,6 +35,10 @@ export function Tasklist() {
     const [dense, setDense] = React.useState(false);
     const [secondary, setSecondary] = React.useState(false);
 
+    const handleButtonClick = (event: string) => {
+        console.log(event);
+    }
+
     return (
         <div>
             <h2>Tasklist</h2>
@@ -47,7 +51,7 @@ export function Tasklist() {
                         {generate(
                             <ListItem
                                 secondaryAction={
-                                    <ListButtons />
+                                    <ListButtons onButtonClick={handleButtonClick} />
                                 }
                             >
                                 <ListItemAvatar>

@@ -2,10 +2,14 @@ import './App.css'
 import {Tasklist} from "./tasklist/tasklist.tsx";
 import {Toolbar} from "./toolbar/toolbar.tsx";
 import mainLogo from './assets/logo_init.png';
+import { atom } from "jotai";
+import FormDialog from "./shared/formDialog.tsx";
 
+
+
+export const addDialogAtom = atom(false)
 
 function App() {
-
 
   return (
       <div className="app">
@@ -21,6 +25,7 @@ function App() {
           </div>
           <div className="tool-container">
               <Toolbar />
+              <FormDialog></FormDialog>
           </div>
       </div>
   )
