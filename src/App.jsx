@@ -1,6 +1,6 @@
 import './App.css'
-import {Tasklist} from "./tasklist/tasklist.tsx";
-import {Toolbar} from "./toolbar/toolbar.tsx";
+import {Tasklist} from "./Pages/tasklist/tasklist.tsx";
+import {Toolbar} from "./Components/shared/toolbar/toolbar.tsx";
 import mainLogo from './assets/logo_init.png';
 import { atom } from "jotai";
 import FormDialog from "./shared/formDialog.tsx";
