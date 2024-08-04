@@ -2,11 +2,12 @@ import {Fab} from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import SettingsIcon from '@mui/icons-material/Settings';
+import AlignHorizontalLeftIcon from '@mui/icons-material/AlignHorizontalLeft';
 import './toolbar.css';
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useAtom } from "jotai";
-import {addDialogAtom} from "../App";
+import {addDialogAtom} from "../../../App";
 
 export function Toolbar() {
 
@@ -23,6 +24,9 @@ export function Toolbar() {
             </Fab>
             <Fab color="primary" aria-label="Calendar">
                 <CalendarMonthIcon />
+            </Fab>
+            <Fab color="primary" aria-label="Gantt">
+                <AlignHorizontalLeftIcon />
             </Fab>
             <Fab color="primary" aria-label="settings">
                 <SettingsIcon />

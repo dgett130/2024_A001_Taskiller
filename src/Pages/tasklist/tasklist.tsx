@@ -12,7 +12,9 @@ import FolderIcon from '@mui/icons-material/Folder';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './tasklist.css';
 import {ListButtons} from "./listButtons";
-import LinearWithValueLabel from "../shared/progressBar";
+import LinearWithValueLabel from "../../shared/progressBar";
+import {useAtom} from "jotai/index";
+import {addDialogAtom} from "../../App";
 
 
 function generate(element) {
@@ -34,9 +36,18 @@ const Demo = styled('div')(({theme}) => ({
 export function Tasklist() {
     const [dense, setDense] = React.useState(false);
     const [secondary, setSecondary] = React.useState(false);
+    const [addTodoDialogAtom, setAddTodoDialog] = useAtom(addDialogAtom);
 
     const handleButtonClick = (event: string) => {
-        console.log(event);
+        switch (event) {
+            case 'edit':
+                setAddTodoDialog(true)
+                break;
+            case 'delete':
+            break;
+            case 'info':
+            break;
+        }
     }
 
     return (
